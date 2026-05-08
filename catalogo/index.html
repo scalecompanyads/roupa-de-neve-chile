@@ -2,6 +2,14 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<script>
+(function () {
+  if (location.protocol === 'file:') return;
+  var b = document.createElement('base');
+  b.href = '/roupa-de-neve-chile/catalago/';
+  document.querySelector('meta[charset]').insertAdjacentElement('afterend', b);
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nevou no Chile — Catálogo 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
