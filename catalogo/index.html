@@ -30,46 +30,6 @@
     mix-blend-mode: screen;
   }
 
-  .pdf-download-fab {
-    position: fixed;
-    right: max(16px, env(safe-area-inset-right, 0px));
-    bottom: max(16px, env(safe-area-inset-bottom, 0px));
-    z-index: 9999;
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    border: 2px solid rgba(201, 168, 76, 0.95);
-    background: linear-gradient(155deg, var(--azul) 0%, var(--azul-escuro) 100%);
-    color: var(--dourado);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 6px 26px rgba(0, 0, 0, 0.4);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .pdf-download-fab:hover {
-    transform: scale(1.06);
-    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.48);
-  }
-  .pdf-download-fab:focus-visible {
-    outline: 2px solid var(--dourado);
-    outline-offset: 3px;
-  }
-  .pdf-download-fab:disabled {
-    opacity: 0.65;
-    cursor: wait;
-    transform: none;
-  }
-  .pdf-download-fab svg {
-    width: 26px;
-    height: 26px;
-    fill: currentColor;
-  }
-  @media print {
-    .pdf-download-fab { display: none !important; }
-  }
-
   body {
     font-family: 'Montserrat', sans-serif;
     background: #fff;
@@ -783,10 +743,10 @@
   <!-- Logo -->
   <div style="
     position:relative;z-index:2;
-    max-width:220px;width:72%;
+    max-width:308px;width:min(100%,308px,calc(72% * 1.4));
     display:flex;align-items:center;justify-content:center;
     margin-bottom:28px;
-  " id="placeholder-logo-capa"><img class="logo-knockout" src="/catalogo/logo-nevou.png" alt="Logo Nevou no Chile" width="220" height="220" style="width:100%;height:auto;max-height:min(28vh,168px);object-fit:contain;display:block;"></div>
+  " id="placeholder-logo-capa"><img class="logo-knockout" src="/catalogo/logo-nevou.png" alt="Logo Nevou no Chile" width="308" height="308" style="width:100%;height:auto;max-height:min(39.2vh,235px);object-fit:contain;display:block;"></div>
 
   <!-- Texto centralizado -->
   <div style="position:relative;z-index:2;text-align:center;padding:0 32px;">
@@ -803,386 +763,6 @@
     </div>
   </div>
 </section>
-
-<!-- PRODUTOS -->
-<div class="produtos-intro">
-  <h2 class="titulo">Nosso <em>Acervo</em></h2>
-  <div class="divisor"></div>
-  <p>Veja algumas das peças disponíveis para você arrasar na neve com estilo e conforto.</p>
-</div>
-
-<div class="prod-cat-header cat-macacao"><h2>Macacões</h2><p>Impermeáveis · Térmicos · Alta Performance</p></div>
-<div class="prod-grid">
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:400px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-        <img src="/catalogo/img-macacoes/macacao-pink.webp" alt="Macacão rosa feminino para neve" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="width:40px;height:40px;border-radius:50%;background:#C8102E;border:2px solid rgba(201,168,76,0.55);box-shadow:inset 0 0 0 1px rgba(0,0,0,0.25);" title="Vermelho"></div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Vermelho</span>
-      </div>
-    </div>
-  </div>
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:400px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-        <img src="/catalogo/img-macacoes/macacao-laranja.webp" alt="Macacão laranja feminino para neve" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(145deg,#ff6eb4,#e91e7a);border:2px solid rgba(201,168,76,0.55);box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2);" title="Rosa Pink"></div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Rosa Pink</span>
-      </div>
-    </div>
-  </div>
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:400px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-        <img src="/catalogo/img-macacoes/macacao-vermelho.webp" alt="Macacão vermelho feminino para neve" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="display:flex;gap:8px;align-items:center;justify-content:center;">
-          <div style="width:34px;height:34px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(201,168,76,0.55);" title="Preto"></div>
-          <div style="width:34px;height:34px;border-radius:50%;background:#8a8a8a;border:2px solid rgba(201,168,76,0.55);" title="Cinza"></div>
-        </div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Preto e Cinza</span>
-      </div>
-    </div>
-  </div>
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:400px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-        <img src="/catalogo/img-macacoes/macacao-grafite.webp" alt="Macacão grafite feminino para neve" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="width:40px;height:40px;border-radius:50%;background:#EF6C00;border:2px solid rgba(201,168,76,0.55);box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2);" title="Laranja"></div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Laranja</span>
-      </div>
-    </div>
-  </div>
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:400px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-        <img src="/catalogo/img-macacoes/macacao-bege.webp" alt="Macacão bege feminino para neve" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="width:40px;height:40px;border-radius:50%;background:#C9A88A;border:2px solid rgba(201,168,76,0.55);box-shadow:inset 0 0 0 1px rgba(0,0,0,0.15);" title="Nude"></div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Nude</span>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<div class="prod-cat-header cat-casaco"><h2>Casacos e Capas</h2><p>Estilo · Conforto · Proteção</p></div>
-<div class="prod-grid">
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:400px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-        <img src="/catalogo/img-casacos/casaco-preto.png" alt="Casaco puffer preto para neve" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(145deg,#000000,#000000,#000000);border:2px solid rgba(21, 20, 20, 0.55);box-shadow:inset 0 0 0 1px rgba(0, 0, 0, 0.25);" title="Preto"></div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Preto</span>
-      </div>
-    </div>
-  </div>
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:400px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-        <img src="/catalogo/img-casacos/casaco-dourado.webp" alt="Casaco puffer metalizado dourado com capuz" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="width:40px;height:40px;border-radius:50%;background:#848484;border:2px solid rgba(118, 118, 118, 0.55);box-shadow:inset 0 0 0 1px rgba(119, 119, 119, 0.12);" title="Preto"></div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Dourado</span>
-      </div>
-    </div>
-  </div>
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:400px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-        <img src="/catalogo/img-casacos/casaco-vermelho.webp" alt="Casaco longo de pelúcia vermelha" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="width:40px;height:40px;border-radius:50%;background:#C8102E;border:2px solid rgba(201,168,76,0.55);box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2);" title="Vermelho"></div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Vermelho</span>
-      </div>
-    </div>
-  </div>
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:400px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-        <img src="/catalogo/img-casacos/casaco-vinho.webp" alt="Casaco de pelúcia vinho com gola ampla" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(145deg,#722f37,#4a1a24);border:2px solid rgba(201,168,76,0.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);" title="Vinho"></div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Vinho</span>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<div class="prod-cat-header" style="background:var(--vermelho);"><h2>Conjuntos</h2><p>Looks Completos · Estilo Total</p></div>
-<div class="prod-grid">
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:400px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
-        <img src="/catalogo/img-conjuntos/conjunto-estampa-preto-branco.png" alt="Conjunto com jaqueta puffer estampa geométrica preto e branco" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="display:flex;gap:8px;align-items:center;justify-content:center;">
-          <div style="width:34px;height:34px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(201,168,76,0.55);" title="Preto"></div>
-          <div style="width:34px;height:34px;border-radius:50%;background:#f5f5f5;border:2px solid rgba(201,168,76,0.55);" title="Branco"></div>
-        </div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Preto e branco</span>
-      </div>
-    </div>
-  </div>
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:400px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
-        <img src="/catalogo/img-conjuntos/conjunto-ski-preto-branco.webp" alt="Conjunto ski jaqueta preta com calça branca e calça técnica preta" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="width:40px;height:40px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(201,168,76,0.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.1);" title="Preto"></div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Preto</span>
-      </div>
-    </div>
-  </div>
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:400px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
-        <img src="/catalogo/img-conjuntos/conjunto-vermelho-full.webp" alt="Conjunto macacão vermelho técnico para neve" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="width:40px;height:40px;border-radius:50%;background:#C8102E;border:2px solid rgba(201,168,76,0.55);box-shadow:inset 0 0 0 1px rgba(0,0,0,0.2);" title="Vermelho"></div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Vermelho</span>
-      </div>
-    </div>
-  </div>
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:400px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
-        <img src="/catalogo/img-conjuntos/conjunto-off-white-estampa.webp" alt="Conjunto jaqueta e calça estampa diamante off-white e branco" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="display:flex;gap:8px;align-items:center;justify-content:center;">
-          <div style="width:34px;height:34px;border-radius:50%;background:#e8e0d5;border:2px solid rgba(201,168,76,0.55);" title="Off white"></div>
-          <div style="width:34px;height:34px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(201,168,76,0.55);" title="Preto"></div>
-        </div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Off white e preto</span>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<div class="prod-cat-header cat-bota"><h2>Botas e Acessórios</h2><p>Conforto · Segurança · Estilo</p></div>
-<div class="prod-grid">
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:320px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
-        <img src="/catalogo/img-botas/bota-preta.webp" alt="Bota preta acolchoada para neve" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="width:40px;height:40px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(201,168,76,0.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.1);" title="Preto"></div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Preto</span>
-      </div>
-    </div>
-  </div>
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:320px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
-        <img src="/catalogo/img-botas/bota-preta-branca.webp" alt="Bota para neve preta e branca com solado robusto" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="width:40px;height:40px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(201,168,76,0.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.1);" title="Preto"></div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Preto</span>
-      </div>
-    </div>
-  </div>
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:320px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
-        <img src="/catalogo/img-botas/bota-dourada.webp" alt="Bota Moon Boot metálica dourada e prateada" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(145deg,#e8c76e,#C9A84C,#a67c2e);border:2px solid rgba(201,168,76,0.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.25);" title="Dourada"></div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Dourada</span>
-      </div>
-    </div>
-  </div>
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:320px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
-        <img src="/catalogo/img-botas/oculos-prata.webp" alt="Óculos de neve com armação clara e lente escura" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(145deg,#e8e8e8,#b8b8b8,#909090);border:2px solid rgba(201,168,76,0.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.35);" title="Prata"></div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Prata</span>
-      </div>
-    </div>
-  </div>
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:320px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
-        <img src="/catalogo/img-botas/oculos-colorido.webp" alt="Óculos de neve com lente espelhada multicor" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="width:40px;height:40px;border-radius:50%;background:conic-gradient(from 0deg,#e91e8c,#9c27b0,#3f51b5,#00bcd4,#ffeb3b,#ff5722,#e91e8c);border:2px solid rgba(201,168,76,0.55);box-shadow:inset 0 0 0 1px rgba(0,0,0,0.15);" title="Colorido"></div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Colorido</span>
-      </div>
-    </div>
-  </div>
-
-  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
-    <div style="display:flex;align-items:stretch;height:320px;">
-      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
-        <img src="/catalogo/img-botas/chapeu-preto.webp" alt="Chapéu de pelúcia preto para frio intenso" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
-      </div>
-      <div style="
-        width:115px;background:#000000;
-        display:flex;flex-direction:column;align-items:center;justify-content:center;
-        gap:14px;padding:24px 12px;flex-shrink:0;
-        border-left:1px solid rgba(201,168,76,0.15);
-      ">
-        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.7;">Cores<br>Disponíveis</p>
-        <div style="width:40px;height:40px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(201,168,76,0.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.1);" title="Preto"></div>
-        <span style="font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;color:rgba(255,255,255,0.82);text-align:center;line-height:1.35;">Preto</span>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
 <!-- QUEM SOMOS -->
 <section class="quem-somos">
   <p class="subtitulo">Nossa história</p>
@@ -1202,10 +782,8 @@
   </div>
 
 </section>
-
 <!-- BANDEIRA -->
 <div class="bandeira"><div class="b-azul"></div><div class="b-branco"></div><div class="b-verm"></div></div>
-
 <!-- LOCALIZAÇÃO -->
 <section class="localizacao">
   <p class="subtitulo">Onde nos encontrar</p>
@@ -1231,7 +809,6 @@
   </div>
 
 </section>
-
 <!-- DIFERENCIAIS -->
 <section class="quem-somos">
 <!-- Diferenciais -->
@@ -1325,7 +902,384 @@
     </div>
   </div>
 </section>
+<!-- PRODUTOS -->
+<div class="produtos-intro">
+  <h2 class="titulo">Nosso <em>Acervo</em></h2>
+  <div class="divisor"></div>
+  <p>Veja algumas das peças disponíveis para você arrasar na neve com estilo e conforto.</p>
+</div>
 
+<div class="prod-cat-header cat-macacao"><h2>Macacões</h2><p>Impermeáveis · Térmicos · Alta Performance</p></div>
+<div class="prod-grid">
+
+  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
+    <div style="display:flex;align-items:stretch;height:400px;">
+      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+        <img src="/catalogo/img-macacoes/macacao-vermelho.webp" alt="Macacão modelo Vermelho para neve" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
+      </div>
+      <div style="
+        width:128px;background:#000000;
+        display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+        gap:8px;padding:16px 10px;flex-shrink:0;
+        border-left:1px solid rgba(201,168,76,0.15);
+      ">
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.5;">Cores<br>Disponíveis</p>
+        <div style="display:flex;flex-direction:column;gap:5px;align-items:center;width:100%;overflow-y:auto;max-height:280px;padding-bottom:4px;">
+          <div style="width:26px;height:26px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(201,168,76,0.5);" title="Preto"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(90deg,#C8102E 50%,#0a0a0a 50%);border:2px solid rgba(201,168,76,0.5);" title="Vermelho e preto"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(90deg,#f5f5f5 50%,#0a0a0a 50%);border:2px solid rgba(201,168,76,0.5);" title="Branco e preto"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:repeating-linear-gradient(45deg,#c4a574,#c4a574 3px,#3d2b1f 3px,#3d2b1f 6px);border:2px solid rgba(201,168,76,0.5);" title="Preto e oncinha"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(90deg,#ff6eb4 50%,#0a0a0a 50%);border:2px solid rgba(201,168,76,0.5);" title="Rosa pink e preto"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
+    <div style="display:flex;align-items:stretch;height:400px;">
+      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+        <img src="/catalogo/img-macacoes/macacao-laranja.webp" alt="Macacão modelo Laranja para neve" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
+      </div>
+      <div style="
+        width:128px;background:#000000;
+        display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+        gap:8px;padding:16px 10px;flex-shrink:0;
+        border-left:1px solid rgba(201,168,76,0.15);
+      ">
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.5;">Cores<br>Disponíveis</p>
+        <div style="display:flex;flex-direction:column;gap:5px;align-items:center;width:100%;">
+          <div style="width:26px;height:26px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(201,168,76,0.5);" title="Preto"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(90deg,#ff6eb4 50%,#0a0a0a 50%);border:2px solid rgba(201,168,76,0.5);" title="Preto e rosa pink"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(90deg,#8a8a8a 50%,#0a0a0a 50%);border:2px solid rgba(201,168,76,0.5);" title="Preto e cinza"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:#f5f5f5;border:2px solid rgba(201,168,76,0.5);" title="Branco"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:#EF6C00;border:2px solid rgba(201,168,76,0.5);" title="Laranja"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
+    <div style="display:flex;align-items:stretch;height:400px;">
+      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+        <img src="/catalogo/img-macacoes/macacao-bege.webp" alt="Macacão modelo Nude para neve" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
+      </div>
+      <div style="
+        width:128px;background:#000000;
+        display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+        gap:8px;padding:16px 10px;flex-shrink:0;
+        border-left:1px solid rgba(201,168,76,0.15);
+      ">
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.5;">Cores<br>Disponíveis</p>
+        <div style="display:flex;flex-direction:column;gap:5px;align-items:center;width:100%;">
+          <div style="width:26px;height:26px;border-radius:50%;background:#C9A88A;border:2px solid rgba(201,168,76,0.5);" title="Nude"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(145deg,#ff6eb4,#e91e7a);border:2px solid rgba(201,168,76,0.5);" title="Rosa pink"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:#f5f5f5;border:2px solid rgba(201,168,76,0.5);" title="Branco"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
+    <div style="display:flex;align-items:stretch;height:400px;">
+      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+        <img src="/catalogo/img-macacoes/macacao-pink.webp" alt="Macacão modelo Rosa Pink para neve" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
+      </div>
+      <div style="
+        width:128px;background:#000000;
+        display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+        gap:8px;padding:16px 10px;flex-shrink:0;
+        border-left:1px solid rgba(201,168,76,0.15);
+      ">
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.5;">Cores<br>Disponíveis</p>
+        <div style="display:flex;flex-direction:column;gap:5px;align-items:center;width:100%;">
+          <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(145deg,#ff6eb4,#e91e7a);border:2px solid rgba(201,168,76,0.5);" title="Rosa pink"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:#f8bbd0;border:2px solid rgba(201,168,76,0.5);" title="Rosa bebê"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(90deg,#1a237e 50%,#f5f5f5 50%);border:2px solid rgba(201,168,76,0.5);" title="Azul marinho e branco"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="prod-cat-header cat-casaco"><h2>Casacos e Capas</h2><p>Estilo · Conforto · Proteção</p></div>
+<div class="prod-grid">
+
+  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
+    <div style="display:flex;align-items:stretch;height:400px;">
+      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+        <img src="/catalogo/img-casacos/casaco-dourado.webp" alt="Casaco modelo Casaco dourado — puffer metalizado com capuz" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
+      </div>
+      <div style="
+        width:128px;background:#000000;
+        display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+        gap:8px;padding:16px 10px;flex-shrink:0;
+        border-left:1px solid rgba(201,168,76,0.15);
+      ">
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.5;">Cores<br>Disponíveis</p>
+        <div style="display:flex;flex-direction:column;gap:5px;align-items:center;width:100%;">
+          <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(145deg,#e8c76e,#C9A84C,#a67c2e);border:2px solid rgba(201,168,76,0.5);" title="Dourado"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(145deg,#722f37,#4a1a24);border:2px solid rgba(201,168,76,0.5);" title="Vinho"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(201,168,76,0.5);" title="Preto"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(90deg,#f5f5f5 50%,#0a0a0a 50%);border:2px solid rgba(201,168,76,0.5);" title="Preto e branco"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
+    <div style="display:flex;align-items:stretch;height:400px;">
+      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+        <img src="/catalogo/img-casacos/casaco-vinho.webp" alt="Casaco modelo Casaco Vinho — pelúcia com gola ampla" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
+      </div>
+      <div style="
+        width:128px;background:#000000;
+        display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+        gap:8px;padding:16px 10px;flex-shrink:0;
+        border-left:1px solid rgba(201,168,76,0.15);
+      ">
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.5;">Cores<br>Disponíveis</p>
+        <div style="display:flex;flex-direction:column;gap:5px;align-items:center;width:100%;overflow-y:auto;max-height:280px;">
+          <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(145deg,#722f37,#4a1a24);border:2px solid rgba(201,168,76,0.5);" title="Vinho"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(201,168,76,0.5);" title="Preto"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:#f5f5f5;border:2px solid rgba(201,168,76,0.5);" title="Branco"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(145deg,#ff6eb4,#e91e7a);border:2px solid rgba(201,168,76,0.5);" title="Rosa pink"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(90deg,#8a8a8a 50%,#5d4037 50%);border:2px solid rgba(201,168,76,0.5);" title="Cinza e marrom"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
+    <div style="display:flex;align-items:stretch;height:400px;">
+      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+        <img src="/catalogo/img-casacos/casaco-preto.png" alt="Casaco modelo Casaco Preto — puffer para neve" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
+      </div>
+      <div style="
+        width:128px;background:#000000;
+        display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+        gap:8px;padding:16px 10px;flex-shrink:0;
+        border-left:1px solid rgba(201,168,76,0.15);
+      ">
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.5;">Cores<br>Disponíveis</p>
+        <div style="display:flex;flex-direction:column;gap:5px;align-items:center;width:100%;">
+          <div style="width:26px;height:26px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(201,168,76,0.5);" title="Preto"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:#1a237e;border:2px solid rgba(201,168,76,0.5);" title="Azul marinho"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(90deg,#0a0a0a 50%,#1a237e 50%);border:2px solid rgba(201,168,76,0.5);" title="Preto e azul marinho"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
+    <div style="display:flex;align-items:stretch;height:400px;">
+      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+        <img src="/catalogo/img-casacos/casaco-vermelho.webp" alt="Casaco modelo Casaco Vermelho — pelúcia longa" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
+      </div>
+      <div style="
+        width:128px;background:#000000;
+        display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+        gap:8px;padding:16px 10px;flex-shrink:0;
+        border-left:1px solid rgba(201,168,76,0.15);
+      ">
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.5;">Cores<br>Disponíveis</p>
+        <div style="display:flex;flex-direction:column;gap:5px;align-items:center;width:100%;">
+          <div style="width:26px;height:26px;border-radius:50%;background:#C8102E;border:2px solid rgba(201,168,76,0.5);" title="Vermelho"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:#2e7d32;border:2px solid rgba(201,168,76,0.5);" title="Verde"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="prod-cat-header" style="background:var(--vermelho);"><h2>Conjuntos</h2><p>Looks Completos · Estilo Total</p></div>
+<div class="prod-grid">
+
+  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
+    <div style="display:flex;align-items:stretch;height:400px;">
+      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
+        <img src="/catalogo/img-conjuntos/conjunto-vermelho-full.webp" alt="Conjunto modelo Conjunto Vermelho — macacão técnico para neve" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
+      </div>
+      <div style="
+        width:128px;background:#000000;
+        display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+        gap:8px;padding:16px 10px;flex-shrink:0;
+        border-left:1px solid rgba(201,168,76,0.15);
+      ">
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.5;">Cores<br>Disponíveis</p>
+        <div style="display:flex;flex-direction:column;gap:5px;align-items:center;width:100%;">
+          <div style="width:26px;height:26px;border-radius:50%;background:#C8102E;border:2px solid rgba(201,168,76,0.5);" title="Vermelho"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:#C9A88A;border:2px solid rgba(201,168,76,0.5);" title="Nude"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:#0d4f4f;border:2px solid rgba(201,168,76,0.5);" title="Azul petróleo"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
+    <div style="display:flex;align-items:stretch;height:400px;">
+      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
+        <img src="/catalogo/img-conjuntos/conjunto-off-white-estampa.webp" alt="Conjunto modelo Off-white e preto — jaqueta e calça estampa diamante" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
+      </div>
+      <div style="
+        width:128px;background:#000000;
+        display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+        gap:8px;padding:16px 10px;flex-shrink:0;
+        border-left:1px solid rgba(201,168,76,0.15);
+      ">
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.5;">Cores<br>Disponíveis</p>
+        <div style="display:flex;flex-direction:column;gap:5px;align-items:center;width:100%;">
+          <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(90deg,#e8e0d5 50%,#0a0a0a 50%);border:2px solid rgba(201,168,76,0.5);" title="Off white e preto"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(90deg,#f5f5f5 50%,#0a0a0a 50%);border:2px solid rgba(201,168,76,0.5);" title="Branco e preto"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
+    <div style="display:flex;align-items:stretch;height:400px;">
+      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
+        <img src="/catalogo/img-conjuntos/conjunto-ski-preto-branco.webp" alt="Conjunto modelo Conjunto preto — ski jaqueta e calça" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
+      </div>
+      <div style="
+        width:128px;background:#000000;
+        display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+        gap:8px;padding:16px 10px;flex-shrink:0;
+        border-left:1px solid rgba(201,168,76,0.15);
+      ">
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.5;">Cores<br>Disponíveis</p>
+        <div style="display:flex;flex-direction:column;gap:5px;align-items:center;width:100%;">
+          <div style="width:26px;height:26px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(201,168,76,0.5);" title="Preto"></div>
+          <div style="width:26px;height:26px;border-radius:50%;background:#f5f5f5;border:2px solid rgba(201,168,76,0.5);" title="Branco"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="prod-cat-header cat-bota"><h2>Botas e Acessórios</h2><p>Conforto · Segurança · Estilo</p></div>
+<div class="prod-grid">
+
+  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
+    <div style="display:flex;align-items:stretch;height:320px;">
+      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
+        <img src="/catalogo/img-botas/bota-dourada.webp" alt="Bota modelo Bota dourada — Moon Boot metálica" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
+      </div>
+      <div style="
+        width:128px;background:#000000;
+        display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+        gap:6px;padding:12px 8px;flex-shrink:0;
+        border-left:1px solid rgba(201,168,76,0.15);
+      ">
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.4;">Cores<br>Disponíveis</p>
+        <div style="display:flex;flex-wrap:wrap;gap:4px;justify-content:center;align-content:flex-start;max-height:230px;overflow-y:auto;padding:2px 0;">
+          <div style="width:22px;height:22px;border-radius:50%;background:linear-gradient(145deg,#e8c76e,#C9A84C);border:2px solid rgba(201,168,76,0.45);" title="Dourada"></div>
+          <div style="width:22px;height:22px;border-radius:50%;background:linear-gradient(145deg,#e8e8e8,#909090);border:2px solid rgba(201,168,76,0.45);" title="Prata"></div>
+          <div style="width:22px;height:22px;border-radius:50%;background:#C8102E;border:2px solid rgba(201,168,76,0.45);" title="Vermelho"></div>
+          <div style="width:22px;height:22px;border-radius:50%;background:#ffeb3b;border:2px solid rgba(201,168,76,0.45);" title="Amarelo"></div>
+          <div style="width:22px;height:22px;border-radius:50%;background:#39ff14;border:2px solid rgba(201,168,76,0.45);" title="Verde neon"></div>
+          <div style="width:22px;height:22px;border-radius:50%;background:#f5f5f5;border:2px solid rgba(201,168,76,0.45);" title="Branco"></div>
+          <div style="width:22px;height:22px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(201,168,76,0.45);" title="Preto"></div>
+          <div style="width:22px;height:22px;border-radius:50%;background:#fce4ec;border:2px solid rgba(201,168,76,0.45);" title="Rosa claro"></div>
+          <div style="width:22px;height:22px;border-radius:50%;background:#e91e7a;border:2px solid rgba(201,168,76,0.45);" title="Rosa"></div>
+          <div style="width:22px;height:22px;border-radius:50%;background:#00bfff;border:2px solid rgba(201,168,76,0.45);" title="Azul bic"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
+    <div style="display:flex;align-items:stretch;height:320px;">
+      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
+        <img src="/catalogo/img-botas/bota-preta.webp" alt="Bota modelo Bota preta acolchoada para neve" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
+      </div>
+      <div style="
+        width:128px;background:#000000;
+        display:flex;flex-direction:column;align-items:center;justify-content:center;
+        gap:10px;padding:20px 10px;flex-shrink:0;
+        border-left:1px solid rgba(201,168,76,0.15);
+      ">
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.5;">Cores<br>Disponíveis</p>
+        <div style="width:36px;height:36px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(201,168,76,0.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);" title="Preto"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
+    <div style="display:flex;align-items:stretch;height:320px;">
+      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
+        <img src="/catalogo/img-botas/bota-preta-branca.webp" alt="Bota modelo Bota preta e branca para neve" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
+      </div>
+      <div style="
+        width:128px;background:#000000;
+        display:flex;flex-direction:column;align-items:center;justify-content:center;
+        gap:10px;padding:20px 10px;flex-shrink:0;
+        border-left:1px solid rgba(201,168,76,0.15);
+      ">
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.5;">Cores<br>Disponíveis</p>
+        <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(90deg,#0a0a0a 50%,#f5f5f5 50%);border:2px solid rgba(201,168,76,0.55);" title="Preto e branco"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
+    <div style="display:flex;align-items:stretch;height:320px;">
+      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
+        <img src="/catalogo/img-botas/oculos-colorido.webp" alt="Óculos modelo Óculos colorido para neve" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
+      </div>
+      <div style="
+        width:128px;background:#000000;
+        display:flex;flex-direction:column;align-items:center;justify-content:center;
+        gap:10px;padding:20px 10px;flex-shrink:0;
+        border-left:1px solid rgba(201,168,76,0.15);
+      ">
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.5;">Cores<br>Disponíveis</p>
+        <div style="display:flex;gap:6px;align-items:center;justify-content:center;">
+          <div style="width:28px;height:28px;border-radius:50%;background:#e91e8c;border:2px solid rgba(201,168,76,0.5);" title="Rosa"></div>
+          <div style="width:28px;height:28px;border-radius:50%;background:#1565c0;border:2px solid rgba(201,168,76,0.5);" title="Azul"></div>
+          <div style="width:28px;height:28px;border-radius:50%;background:#2e7d32;border:2px solid rgba(201,168,76,0.5);" title="Verde"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
+    <div style="display:flex;align-items:stretch;height:320px;">
+      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
+        <img src="/catalogo/img-botas/oculos-prata.webp" alt="Óculos modelo Óculos prata" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
+      </div>
+      <div style="
+        width:128px;background:#000000;
+        display:flex;flex-direction:column;align-items:center;justify-content:center;
+        gap:10px;padding:20px 10px;flex-shrink:0;
+        border-left:1px solid rgba(201,168,76,0.15);
+      ">
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.5;">Cores<br>Disponíveis</p>
+        <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(145deg,#e8e8e8,#b8b8b8,#909090);border:2px solid rgba(201,168,76,0.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.35);" title="Prata"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#000000;border-radius:16px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,0.55);border:1px solid rgba(201,168,76,0.22);">
+    <div style="display:flex;align-items:stretch;height:320px;">
+      <div style="flex:1;background:#000000;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;">
+        <img src="/catalogo/img-botas/chapeu-preto.webp" alt="Chapéu modelo Chapéu preto de pelúcia" width="800" height="800" loading="lazy" decoding="async" style="max-width:90%;max-height:90%;object-fit:contain;object-position:center;display:block;margin:auto;">
+      </div>
+      <div style="
+        width:128px;background:#000000;
+        display:flex;flex-direction:column;align-items:center;justify-content:center;
+        gap:10px;padding:20px 10px;flex-shrink:0;
+        border-left:1px solid rgba(201,168,76,0.15);
+      ">
+        <p style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);text-align:center;line-height:1.5;">Cores<br>Disponíveis</p>
+        <div style="width:36px;height:36px;border-radius:50%;background:#0a0a0a;border:2px solid rgba(201,168,76,0.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);" title="Preto"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
 <!-- COMO ALUGAR -->
 <section class="como-alugar">
   <p class="subtitulo">Passo a passo</p>
@@ -1540,75 +1494,6 @@
     <span>🇨🇱</span><span>Viva o Chile. Vista o Melhor.</span><span>🇨🇱</span>
   </div>
 </section>
-
-<button type="button" class="pdf-download-fab" id="pdf-download-fab" aria-label="Baixar catálogo em PDF" title="Baixar catálogo em PDF">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-</button>
-
-<script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>
-<script>
-(function () {
-  function initPdfFab() {
-    var btn = document.getElementById('pdf-download-fab');
-    if (!btn) return;
-
-    btn.addEventListener('click', function () {
-      if (typeof html2pdf === 'undefined') {
-        window.print();
-        return;
-      }
-      btn.disabled = true;
-      btn.setAttribute('aria-busy', 'true');
-      var prevDisplay = btn.style.display;
-      btn.style.display = 'none';
-
-      var opts = {
-        margin: [10, 10, 10, 10],
-        filename: 'Nevou-no-Chile-Catalogo-2026.pdf',
-        image: { type: 'jpeg', quality: 0.93 },
-        html2canvas: {
-          scale: Math.min(2, (window.devicePixelRatio || 1) * 1.25),
-          useCORS: true,
-          allowTaint: true,
-          logging: false,
-          scrollX: 0,
-          scrollY: -window.scrollY,
-          windowWidth: document.documentElement.scrollWidth,
-          windowHeight: document.documentElement.scrollHeight
-        },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak: { mode: ['css', 'legacy'] }
-      };
-
-      var done = function () {
-        btn.style.display = prevDisplay || '';
-        btn.disabled = false;
-        btn.removeAttribute('aria-busy');
-      };
-
-      try {
-        Promise.resolve(html2pdf().set(opts).from(document.body).save())
-          .then(done)
-          .catch(function (err) {
-            console.error(err);
-            done();
-            window.print();
-          });
-      } catch (e) {
-        console.error(e);
-        done();
-        window.print();
-      }
-    });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initPdfFab);
-  } else {
-    initPdfFab();
-  }
-})();
-</script>
 
 </body>
 </html>
